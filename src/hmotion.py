@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 class HorizontalMotion:
     
     def __init__(self, k, m, v0, x0, time, t_max):
@@ -18,7 +17,7 @@ class HorizontalMotion:
         t_data = np.arange(0, t_max, time)
         x_data = []
         
-        for spot in data :
+        for spot in t_data :
             a = -k/m * x
             v += a * time
             x += v * time
@@ -28,6 +27,16 @@ class HorizontalMotion:
         plt.xlabel("Time (s)")
         plt.ylabel("Displacement (m)")
         plt.title("Harmonic Motion")
-        plt.gird(True)
+        plt.grid(True)
         plt.show()
+    
+    
+    # matplotlib.pyplot.plot(t_data, x_data)
+    
+    # if __name__ == "__main__":
+    #     HorizontalMotion(k=10, m=1, v0=0, x
+    
+    
+        
+        
         
