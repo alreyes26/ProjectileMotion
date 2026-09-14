@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
+
 plt.style.use("../themes/rose-pine-moon.mplstyle")
 
 
@@ -98,3 +100,19 @@ if __name__ == "__main__":
         theta=45,
         time=0.01
     )
+    
+    
+    
+    class TestProjectile:
+        def test_initialization(self):
+            p = Projectile(v0=10, theta=30, time=0.1)
+            assert p.initial_velocity == 10
+            assert p.launch_angle == 30
+            assert p.g == 9.81
+            assert p.time_step == 0.1
+    
+            assert isinstance(p.initial_velocity, (int, float))
+            
+            if isinstance(p.initial_velocity, (int, float)):
+                assert p.initial_velocity > 0
+                 
